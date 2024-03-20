@@ -9,3 +9,8 @@ Content-Type: application/x-www-form-urlencoded
 name=LS
 
 ###
+
+GET http://localhost:8080/test/list
+Accept: application/json
+
+###
