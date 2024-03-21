@@ -1,7 +1,8 @@
 package com.njulsl.knowledgebase.controller;
 
-import com.njulsl.knowledgebase.domain.Ebook;
+import com.njulsl.knowledgebase.req.EbookReq;
 import com.njulsl.knowledgebase.resp.CommonResp;
+import com.njulsl.knowledgebase.resp.EbookResp;
 import com.njulsl.knowledgebase.service.EbookService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,10 +20,10 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public CommonResp list()
+    public CommonResp list(EbookReq req)
     {
-        CommonResp<List<Ebook>> commonResp = new CommonResp<>();
-        List<Ebook> list = ebookService.list();
+        CommonResp<List<EbookResp>> commonResp = new CommonResp<>();
+        List<EbookResp> list = ebookService.list(req);
         commonResp.setContent(list);
         return commonResp;
     }
