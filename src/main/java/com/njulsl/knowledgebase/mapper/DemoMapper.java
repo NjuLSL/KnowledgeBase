@@ -2,8 +2,9 @@ package com.njulsl.knowledgebase.mapper;
 
 import com.njulsl.knowledgebase.domain.Demo;
 import com.njulsl.knowledgebase.domain.DemoExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface DemoMapper {
     long countByExample(DemoExample example);
