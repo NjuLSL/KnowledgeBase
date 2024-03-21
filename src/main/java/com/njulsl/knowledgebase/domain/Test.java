@@ -1,9 +1,12 @@
 package com.njulsl.knowledgebase.domain;
 
 public class Test {
+
     private Integer id;
+
     private String name;
-    private  String password;
+
+    private String password;
 
     public Integer getId() {
         return id;
