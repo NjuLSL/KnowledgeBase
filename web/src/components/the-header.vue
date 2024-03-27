@@ -1,10 +1,10 @@
 <template>
   <a-layout-header class="header">
-    <div class="logo">Nju_LSL文档系统</div>
+    <div class="logo">Nju_LSL 文档管理系统</div>
     <a-menu
         theme="dark"
         mode="horizontal"
-        :style="{ lineHeight: '64px' }"
+        :style="{ lineHeight: '70px' }"
     >
       <a-menu-item key="/">
         <router-link to="/">首页</router-link>
@@ -22,10 +22,11 @@
         <router-link to="/about">关于我们</router-link>
       </a-menu-item>
       <a-popconfirm
-          title="确认退出登录?"
+          title="确认退出?"
           ok-text="是"
           cancel-text="否"
           @confirm="logout()"
+          class="custom-popconfirm"
       >
         <a class="login-menu" v-show="user.id">
           <span>退出登录</span>
@@ -132,16 +133,19 @@ export default defineComponent({
 <style>
 .logo {
   width: 200px;
-  height: 31px;
-  /*background: rgba(255, 255, 255, 0.2);*/
-  /*margin: 16px 28px 16px 0;*/
+  height: 25px;
+  margin: 16px 28px 30px 20px;
   float: left;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 .login-menu {
   float: right;
   color: white;
-  padding-left: 10px;
+  margin: 0px 30px 0px 20px;
+  padding-left: 1px;
+}
+.custom-popconfirm {
+  width: 60px; /* 设置宽度为 300px，您可以根据需要调整这个数值 */
 }
 </style>
